@@ -5,17 +5,17 @@ using System.Threading.Tasks;
 
 namespace BirdsOfTheRedBookOfUkraineDB.Models
 {
-    public class ArealsUA
+    public class ArealUA
     {
-        public ArealsUA()
+        public ArealUA()
         {
             Species = new List<Species>();
         }
 
-        public int IdArealUA { get; set; }
-        public int IDRegion { get; set; }
+        public int Id { get; set; }
+        public int RegionId { get; set; }
 
-        public virtual Regions Region { get; set; }
+        public virtual Region Region { get; set; }
 
         public virtual ICollection<Species> Species { get; set; }
     }

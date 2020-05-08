@@ -9,25 +9,25 @@ namespace BirdsOfTheRedBookOfUkraineDB.Models
     {
         public Species()
         {
-            BirdPhotos = new List<BirdPhotos>();
+            BirdPhotos = new List<BirdPhoto>();
         }
 
-        public int IdSpecies { get; set; }
-        public int IDGenus { get; set; }
+        public int Id { get; set; }
+        public int GenusId { get; set; }
         public string ScientificName { get; set; }
         public string UkrName { get; set; }
         public string EngName { get; set; }
-        public int IDArealUA { get; set; }
+        public int ArealUAId { get; set; }
         public string Description { get; set; }
 
-        public int IDStatus { get; set; }
+        public int StatusId { get; set; }
         public string VoiceURL { get; set; }
         public string IUCN_URL { get; set; }
 
-        public virtual Genuses Genus { get; set; }
-        public virtual Statuses Status { get; set; }
-        public virtual ArealsUA ArealUA { get; set; }
+        public virtual Genus Genus { get; set; }
+        public virtual Status Status { get; set; }
+        public virtual ArealUA ArealUA { get; set; }
 
-        public virtual ICollection<BirdPhotos> BirdPhotos { get; set; }
+        public virtual ICollection<BirdPhoto> BirdPhotos { get; set; }
     }
 }

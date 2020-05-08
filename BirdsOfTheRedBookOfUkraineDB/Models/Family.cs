@@ -5,18 +5,21 @@ using System.Threading.Tasks;
 
 namespace BirdsOfTheRedBookOfUkraineDB.Models
 {
-    public class Orders
+    public class Family
     {
-        public Orders()
+        public Family()
         {
-            Families = new List<Families>();
+            Genuses = new List<Genus>();
         }
 
-        public int IdOrder { get; set; }
+        public int Id { get; set; }
+        public int OrderId { get; set; }
         public string ScientificName { get; set; }
         public string UkrName { get; set; }
         public string EngName { get; set; }
 
-        public virtual ICollection<Families> Families { get; set; }
+        public virtual Order Order { get; set; }
+
+        public virtual ICollection<Genus> Genuses { get; set; }
     }
 }

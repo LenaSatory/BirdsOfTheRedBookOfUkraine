@@ -5,16 +5,16 @@ using System.Threading.Tasks;
 
 namespace BirdsOfTheRedBookOfUkraineDB.Models
 {
-    public class Sex
+    public class Status
     {
-        public Sex()
+        public Status()
         {
-            BirdPhotos = new List<BirdPhoto>();
+            Specieses = new List<Species>();
         }
 
         public int Id { get; set; }
-        public string Name { get; set; }
+        public string RBCategoriesName { get; set; }
 
-        public virtual ICollection<BirdPhoto> BirdPhotos { get; set; }
+        public virtual ICollection<Species> Specieses { get; set; }
     }
 }

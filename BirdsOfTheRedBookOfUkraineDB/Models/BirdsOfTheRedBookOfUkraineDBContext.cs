@@ -9,15 +9,15 @@ namespace BirdsOfTheRedBookOfUkraineDB.Models
 {
     public class BirdsOfTheRedBookOfUkraineDBContext : DbContext
     {
-        public virtual DbSet<Orders> Orders { get; set; }
-        public virtual DbSet<Families> Families { get; set; }
-        public virtual DbSet<Genuses> Genuses { get; set; }
-        public virtual DbSet<Species> Species { get; set; }
-        public virtual DbSet<Statuses> Statuses { get; set; }
-        public virtual DbSet<ArealsUA> ArealsUA { get; set; }
-        public virtual DbSet<Regions> Regions { get; set; }
-        public virtual DbSet<BirdPhotos> BirdPhotos { get; set; }
-        public virtual DbSet<Sex> Sex { get; set; }
+        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Family> Families { get; set; }
+        public virtual DbSet<Genus> Genuses { get; set; }
+        public virtual DbSet<Species> Specieses { get; set; }
+        public virtual DbSet<Status> Statuses { get; set; }
+        public virtual DbSet<ArealUA> ArealUAs { get; set; }
+        public virtual DbSet<Region> Regions { get; set; }
+        public virtual DbSet<BirdPhoto> BirdPhotos { get; set; }
+        public virtual DbSet<Sex> Sexes { get; set; }
 
         public BirdsOfTheRedBookOfUkraineDBContext(DbContextOptions<BirdsOfTheRedBookOfUkraineDBContext> options)
             :base(options)
