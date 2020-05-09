@@ -7,16 +7,11 @@ namespace BirdsOfTheRedBookOfUkraineDB.Models
 {
     public class ArealUA
     {
-        public ArealUA()
-        {
-            Species = new List<Species>();
-        }
-
         public int Id { get; set; }
         public int RegionId { get; set; }
+        public int SpeciesId { get; set; }
 
         public virtual Region Region { get; set; }
-
-        public virtual ICollection<Species> Species { get; set; }
+        public virtual Species Species { get; set; }
     }
 }

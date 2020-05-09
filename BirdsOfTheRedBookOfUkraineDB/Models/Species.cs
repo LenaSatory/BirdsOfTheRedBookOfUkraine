@@ -10,6 +10,7 @@ namespace BirdsOfTheRedBookOfUkraineDB.Models
         public Species()
         {
             BirdPhotos = new List<BirdPhoto>();
+            ArealUAs = new List<ArealUA>();
         }
 
         public int Id { get; set; }
@@ -17,7 +18,6 @@ namespace BirdsOfTheRedBookOfUkraineDB.Models
         public string ScientificName { get; set; }
         public string UkrName { get; set; }
         public string EngName { get; set; }
-        public int ArealUAId { get; set; }
         public string Description { get; set; }
 
         public int StatusId { get; set; }
@@ -26,8 +26,8 @@ namespace BirdsOfTheRedBookOfUkraineDB.Models
 
         public virtual Genus Genus { get; set; }
         public virtual Status Status { get; set; }
-        public virtual ArealUA ArealUA { get; set; }
 
         public virtual ICollection<BirdPhoto> BirdPhotos { get; set; }
+        public virtual ICollection<ArealUA> ArealUAs { get; set; }
     }
 }

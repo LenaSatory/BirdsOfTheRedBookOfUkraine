@@ -11,23 +11,23 @@ namespace BirdsOfTheRedBookOfUkraineDB.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class SpeciesController : ControllerBase
+    public class SpeciesesController : ControllerBase
     {
         private readonly BirdsOfTheRedBookOfUkraineDBContext _context;
 
-        public SpeciesController(BirdsOfTheRedBookOfUkraineDBContext context)
+        public SpeciesesController(BirdsOfTheRedBookOfUkraineDBContext context)
         {
             _context = context;
         }
 
-        // GET: api/Species
+        // GET: api/Specieses
         [HttpGet]
         public async Task<ActionResult<IEnumerable<Species>>> GetSpecieses()
         {
             return await _context.Specieses.ToListAsync();
         }
 
-        // GET: api/Species/5
+        // GET: api/Specieses/5
         [HttpGet("{id}")]
         public async Task<ActionResult<Species>> GetSpecies(int id)
         {
@@ -41,7 +41,7 @@ namespace BirdsOfTheRedBookOfUkraineDB.Controllers
             return species;
         }
 
-        // PUT: api/Species/5
+        // PUT: api/Specieses/5
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPut("{id}")]
@@ -73,7 +73,7 @@ namespace BirdsOfTheRedBookOfUkraineDB.Controllers
             return NoContent();
         }
 
-        // POST: api/Species
+        // POST: api/Specieses
         // To protect from overposting attacks, enable the specific properties you want to bind to, for
         // more details, see https://go.microsoft.com/fwlink/?linkid=2123754.
         [HttpPost]
@@ -85,7 +85,7 @@ namespace BirdsOfTheRedBookOfUkraineDB.Controllers
             return CreatedAtAction("GetSpecies", new { id = species.Id }, species);
         }
 
-        // DELETE: api/Species/5
+        // DELETE: api/Specieses/5
         [HttpDelete("{id}")]
         public async Task<ActionResult<Species>> DeleteSpecies(int id)
         {
